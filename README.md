@@ -9,3 +9,5 @@ using fontawesome for fonts and icons
 using jquery, momentjs
 using Chart.js
 using pnotify
+
+user context      in ../context/user      ctx based on client certificate id
