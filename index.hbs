@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="Content-Type" content="text/html" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+  <title>PINGWEE - Supervision des IP publiques</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <script src="/js/fontawesome-all.js"></script>
+  <script src="/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="/js/pnotify.custom.min.js"></script>
+  <link href="/css/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+  const user = "{{user}}"
+  const session = "{{session}}"
+  //const socket = io('https://{{server}}:{{port}}')
+  const socket = io('https://{{server}}')
+  </script>
+  <script src="/js/Chart.js"></script>
+</head>
+<body>
+  <div id=wait>en attente de connexion ...</div>
+
+  <div id=logo></div>
+  <div id=header></div>
+  <div id=timer></div>
+  <div id="summary"></div>
+  <div id=mode></div>
+  <div id=networks></div>
+  <div class='graph graph1'><div><canvas id=pinggraph></canvas></div><div><canvas id=tcp80graph></canvas></div><div><canvas id=tcp443graph></canvas></div></div>
+  <div class='graph graph2'><div><canvas id=variation></canvas></div></div>
+  <div id=tcp></div>
+  <div id=footer></div>
+  <div id=errors></div>
+
+  <div id=clear></div>
+  <div id=user>{{user}}</div>
+  <div id=search></div>
+
+  <script src="/js/graph.js"></script>
+  <script src="/js/api.js"></script>
+</body>
+</html>
