@@ -637,7 +637,6 @@ socket.on('ping',function(x) {
   if(typeof x == 'undefined') { return console.log('really bad ping',x); }
   if(!ready || !x.all || !x.net || !x.ip) { return; }
   if(!x.last || !x.last.ip) { return; }
-  //if(x.last.ip=="185.24.185.114") { console.log('ping',x); }
   //console.log('ping',x.last.ip)
   const ip = x.last.ip
   dopingstatus($(ip),x.ip,x.net,x.all,x.last)
@@ -646,7 +645,6 @@ socket.on('tcp',function(x) {
   if(typeof x == 'undefined') { return console.log('really bad tcp',x); }
   if(!ready || !x.all || !x.net || !x.ip) { return; }
   if(!x.last || !x.last.ip) { return; }
-  //if(x.last.ip=="185.24.185.114") { console.log('tcp',x); }
   //console.log('tcp',x)
   const ip = x.last.ip
   dotcpstatus($(ip),x.ip,x.net,x.all,x.last)
